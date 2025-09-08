@@ -15,16 +15,16 @@ Linguagem utilizada : C
       
       if (quantidade > 100) {
               printf("Desconto aplicado! \n");
-        // 1. Calcula quantos bottons tem desconto (por exemplo, 6 bottons)
+        
         float quantidade_desconto = quantidade - 100;
         
-        // 2. Calcula o valor dos primeiros 100 bottons sem desconto
+       
         float preco_dos_100_normais = 100 * preco_unit;
         
-        // 3. Calcula o valor dos bottons que têm desconto
+        
         float preco_dos_com_desconto = quantidade_desconto * (preco_unit * (1 - desconto_botton));
         
-        // 4. Soma tudo para ter o valor total
+      
         preco_total = preco_dos_100_normais + preco_dos_com_desconto;
     
       } else {
