@@ -1,0 +1,26 @@
+Aplicando 10% de desconto nas compras acima de 100 bottons!
+Linguagem Utilizada: C!
+
+#include <stdio.h> //incluindo a biblioteca e pegando as tags que tem dentro dela
+
+int main() { // declarando que essa e a parte principal 
+        int quantidade ; // pegando a quantidade
+        float preco_unit = 2.00; //pegando o preco unitario
+        float preco_total; //pegando o preco total 
+        float desconto = 0.10; //pegando o desconto
+        
+        printf("Quantas unidades de bottons você quer? \n"); //perguntando quantas unidaes quer 
+        scanf("%d", &quantidade); //formatando em decimal e guardando a quantidade
+        
+        if (quantidade > 100) {
+            printf("Voce ganhou desconto! \n");
+            preco_total = (quantidade * preco_unit) * (1 - desconto);
+        } else {
+            printf("Voce nao ganhou desconto! \n");
+            preco_total = (quantidade * preco_unit);
+            
+        }
+        
+        printf("O valor total da sua compra é R$ %2.f", preco_total);
+        return 0;
+}
