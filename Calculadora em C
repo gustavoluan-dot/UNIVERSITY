@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	
+	// Declarando minhas variavies
+	float n1,n2;
+	int opcao;
+	
+	// Entrada de Dados
+	printf("Entre com algum numero: ");
+	scanf("%f", &n1);
+	fflush (stdin);
+	printf("Entre com a opcao desejada: "
+	"\n 1.Somar"
+	"\n 2.Subtrair"
+	"\n 3.Dividir"
+	"\n 4.Multiplicar");
+	scanf("%d", &opcao);
+	
+	printf("Entre com outro numero: ");
+	scanf("%f", &n2);
+	
+	switch(opcao) {
+		
+		case 1: 
+			printf("A soma entre %.2f e %.2f = %.2f", n1, n2, n1 + n2);
+			break;
+		
+		case 2:
+			printf("A subtracao entre %.2f e %.2f = %.2f", n1, n2, n1 - n2);
+			break;
+		
+		case 3:
+			if(n2==0) {
+				printf("Nenhum numero e divisel por zero. ");
+				
+			} else {
+				printf("A divisao entre %.2f e %.2f = %.2f", n1, n2, n1 / n2);
+				break;
+			}
+			
+		case 4: 
+		printf("A multiplicação entre %.2f e %.2f = %.2f", n1, n2, n1 * n2);
+		break;	
+	}
+	fflush (stdin);
+	return 0;
+	getch ();
+	
+}
