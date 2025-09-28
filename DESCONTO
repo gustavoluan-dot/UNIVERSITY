@@ -1,0 +1,37 @@
+Aplicando 15% de desconto na compra de 100 bottons. Obs: O desconto é aplicado somente a partir do 100 botton.
+Linguagem utilizada : C
+
+
+#include <stdio.h>
+
+    int main () {
+      int quantidade;
+      float preco_unit = 2.00;
+      float preco_total;
+      float desconto_botton = 0.15;
+      
+      printf("Quantas unidades voce quer? \n");
+      scanf("%d", &quantidade);
+      
+      if (quantidade > 100) {
+              printf("Desconto aplicado! \n");
+        
+        float quantidade_desconto = quantidade - 100;
+        
+       
+        float preco_dos_100_normais = 100 * preco_unit;
+        
+        
+        float preco_dos_com_desconto = quantidade_desconto * (preco_unit * (1 - desconto_botton));
+        
+      
+        preco_total = preco_dos_100_normais + preco_dos_com_desconto;
+    
+      } else {
+          printf("Sem desconto! \n");
+          preco_total = quantidade * preco_unit;
+      }
+      
+      printf("O valor total é R$ %2.f", preco_total);
+      return 0;
+    }
