@@ -1,0 +1,22 @@
+
+#include <stdio.h> // declarando a primeira biblioteca (reconhece o scanf, printf..)
+/* Matriz é uma organização no formato de tabela, a onde as medidas com LINHAS e COLUNAS
+*/
+int main () { // delcarando meu corpo principal, a onde vai ficar todo o codigo
+
+    int A[2][2] = { {1,2}, {3,4} }; // declarando a minha primeira matriz 2x2 armazenado 4 valores
+    int B[2][2] = { {5,6}, {7,8} }; // declarando minha segunda matriz 2x2 armazenando 4 valores
+    int C[2][2]; // declarei uma matriz vazia na qual vai receber os valores da matriz A E B 
+    
+    printf("A soma das matrizes é: \n"); // imprimindo na tela a soma das matrizes
+    
+    for(int m1 = 0; m1 < 2; m1++) { // relacionado a matriz A e pegando os valores dela iniciando meu laço de repetição e limitando que vai até somente a quantidade de linhas e colunas que a matriz tiver
+                
+        for(int m2 = 0; m2 < 2; m2++) { // mesma coisa porém relacionado a matriz B, pegando os valores dela
+            C[m1][m2] = A[m1][m2] + B[m1][m2]; // declarando que os valores da matriz A e matriz B vão ficar armazenadas na matriz C
+            printf("%d \t", C[m1][m2]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
