@@ -2,27 +2,55 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
   background-color: #F0F3FF;
   color: #333;
   line-height: 1.6;
+  padding-top: 100px;
 }
 
 .header-principal {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #007F48;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  position: relative;
+  z-index: 1000;
 }
 
 .logo img {
-  height: 60px;
+  height: 100px;
+  width: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon span {
+  background-color: white;
+  height: 4px;
+  width: 25px;
+  border-radius: 2px;
 }
 
 .navbar .menu-links {
@@ -42,25 +70,10 @@ body {
   color: #FFD700;
 }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  background-color: #F0F3FF;
-  height: 4px;
-  width: 25px;
-  margin: 4px 0;
-  border-radius: 2px;
-}
-
 .banner-principal {
   background-color: #ffffff;
   padding: 40px 20px;
   text-align: center;
-  animation: fadeIn 1s ease-in;
 }
 
 .img-produto-banner {
@@ -78,7 +91,6 @@ body {
   background-color: #ffffff;
   padding: 40px 20px;
   text-align: center;
-  animation: fadeIn 1s ease-in;
 }
 
 .mensagem-destaque-faixa h2 {
@@ -130,7 +142,6 @@ body {
   background-color: #F0F3FF;
   padding: 40px 20px;
   text-align: center;
-  animation: fadeIn 1s ease-in;
 }
 
 .produtos-destaque h2 {
@@ -190,12 +201,9 @@ footer {
   text-align: center;
   padding: 20px;
   font-style: italic;
+  margin-top: 50px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 @media (max-width: 768px) {
   .navbar .menu-links {
@@ -203,7 +211,7 @@ footer {
     flex-direction: column;
     background-color: #007F48;
     position: absolute;
-    top: 80px;
+    top: 100px;
     right: 40px;
     width: 200px;
     padding: 20px;
@@ -211,11 +219,38 @@ footer {
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
 
-  .navbar .menu-links.active {
+  #menu-toggle:checked + .menu-icon + .navbar .menu-links {
     display: flex;
   }
 
-  .menu-toggle {
+  .menu-icon {
     display: flex;
+  }
+
+  .header-principal {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .cartao-produto {
+    min-height: auto;
+  }
+
+  .cartao-produto img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .vantagens-grade {
+    gap: 20px;
+  }
+
+  .vantagem-item img {
+    width: 120px;
   }
 }

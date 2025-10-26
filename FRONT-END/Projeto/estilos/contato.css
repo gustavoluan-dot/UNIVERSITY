@@ -36,6 +36,11 @@ header h1 img {
 header h1 img:hover {
   transform: scale(1.05);
 }
+.cor  {  
+    color: #007F48;
+}
+
+  
 
 nav ul {
   list-style: none;
