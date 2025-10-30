@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[5];
+    int numeros;
+    
+    for (numeros = 0; numeros < 5; numeros++) {
+        printf("Digite algum número: \n");
+        scanf("%d", &vetor[numeros]);
+        
+        
+    } 
+    for (numeros = 0; numeros < 5; numeros++) {
+         printf("\n");
+        printf("O numero correspondente do vetor %d = %d", numeros, vetor[numeros]);
+       
+    }
+    
+    return 0;
+    
+}
